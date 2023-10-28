@@ -9,23 +9,20 @@ int main(){
           c++;
           n=n/x;
           x=2;
-          continue;
         }
-        else{ 
-          if(c!=0){
+        else if(c!=0){
           cout << "^" << c;
           c=0;
           n=n/x;
           s=x;
           x=2;
-          continue;
         }
-        else if(s!=0)
-          cout << " * ";
-        cout << x;
-        n=n/x;
-        s=x;
-        x=2;
+        else if(s!=0){
+          cout << " * " << x;
+          n=n/x;
+          s=x;
+          x=2;
+          }
       }
       else
         x++;
