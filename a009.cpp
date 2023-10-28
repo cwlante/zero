@@ -9,5 +9,5 @@ int main()
     for(int i = 0; i < sec.size(); i++){
         cle[i] = sec[i]+k;
     }    //重複執行將祕文位移k位並指派到cle
-    cout << cle << /n;
+    cout << cle << "/n";
 }
