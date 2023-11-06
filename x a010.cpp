@@ -39,3 +39,9 @@ int main(){
       break;
   }
 }
+/*
+s==0 coutx 
+x==s c++
+c!=0&&naxtx!=s cout^c
+c==0&&x!=s cout*x
+*/
