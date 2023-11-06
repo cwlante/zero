@@ -5,29 +5,37 @@ int main(){
   while(cin >> n){
     while(x<=n){
       if(n%x == 0){
+        if(s==0){
+          cout << x;
+          goto setn;
+          }
         if(x==s){
           c++;
-          n=n/x;
-          x=2;
+          goto setn;
         }
-        else if(c!=0){
-          cout << "^" << c;
-          c=0;
-          n=n/x;
-          s=x;
-          x=2;
-        }
-        else if(s!=0){
+        else if(c==0){  
           cout << " * " << x;
-          n=n/x;
-          s=x;
-          x=2;
-          }
+          goto setn;
+        }
+        else{
+          cout << "^" << c+1;
+          c=0;
+          goto setn;
+        }
+        continue;
+    setn:
+      n=n/x;
+      s=x;
+      x=2;
       }
       else
         x++;
     }
-    if (n==1)
+    if (n==1 && c!=0){
+      cout << "^" << c;
+      c=0;
+    }
+    else if(n==1)
       break;
   }
 }
